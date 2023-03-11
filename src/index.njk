@@ -1,0 +1,15 @@
+---
+layout: default
+pagination:
+    data: collections.pagedPosts
+    size: 1
+    alias: paged
+permalink: "{% if paged.number > 1 %}page/{{ paged.number }}/{% endif %}index.html"
+---
+
+<div>
+    {% include "partials/post-item.njk" %}
+</div>
+{% if collections.posts.length > site.paginate %}
+    {% include "partials/pagination.njk" %}
+{% endif %}

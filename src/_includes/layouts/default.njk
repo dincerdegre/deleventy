@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include "partials/meta.njk" %} 
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="{{ site.baseUrl | url }}{{ page.url }}">
+        <link rel="stylesheet" href="{{ '/assets/styles/global.css' | url }}">
+    </head>
+    <body>
+        {% include "partials/header.njk" %}
+        <main class="mainContainer">
+            <div class="row flexTop">
+                <div class="article">{{ content | safe }}</div>
+                <div class="sidebar">
+                    <div class="sidebarContainer">
+                    {% include "partials/featured-item.njk" %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        {% include "partials/footer.njk" %}
+        <script src="{{ '/assets/js/bundle.js' | url }}"></script>
+    </body>
+</html>

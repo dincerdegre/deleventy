@@ -1,0 +1,11 @@
+[
+    {
+        "label": "About",
+        "url": "/about"
+    },
+    {
+        "label": "Github",
+        "url": "https://github.com",
+        "external": true
+    }
+]

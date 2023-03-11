@@ -4,8 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "start": "npm run serve",
+    "serve": "npm run clean && cross-env NODE_ENV=development eleventy --serve",
+    "watch": "npm run clean && cross-env NODE_ENV=development eleventy --watch",
+    "build": "npm run clean && cross-env NODE_ENV=production eleventy"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "html-minifier": "^4.0.0",
+    "luxon": "^3.3.0",
+    "rimraf": "^4.4.0",
+    "terser": "^5.16.6"
+  },
+  "dependencies": {
+    "eleventy-sass": "^2.1.7"
+  }
 }

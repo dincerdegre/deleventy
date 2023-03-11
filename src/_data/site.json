@@ -1,0 +1,13 @@
+{
+    "title": "Deleventy",
+    "description": "Home",
+    "author": "admin",
+    "keywords": [
+        "tag1",
+        "tag2"
+    ],
+    "locale":"en",
+    "featuredLimit":10,
+    "baseUrl": "http://localhost:8080",
+    "paginate": 3
+}

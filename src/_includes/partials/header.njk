@@ -1,0 +1,17 @@
+<header id="header">
+    <div class="headerContainer flex">
+        <div class="logo">
+        <a href="/">{{ site.title }}</a>
+        </div>
+        <div class="nav">
+            <ul>
+                {% for item in headerMenu %}
+                <li><a href="{{ item.url | url }}" {% if item.external %}target="_blank" rel="noopener" {% endif %}>{{ item.label }}</a></li>
+                  {% endfor %}  
+            </ul>  
+            
+            <a href="{{ item.url | url }}" {% if item.newTab %}target="_blank" rel="noopener" {% endif %}class="block mt-4 md:inline-block md:mt-0 font-medium text-slate-700 hover:text-teal-600 text-base mr-4">{{ item.label }}</a>
+          
+        </div>    
+    </div>
+</header>

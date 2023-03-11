@@ -1,0 +1,22 @@
+{% set featured = collections.featuredPosts %}
+{%- set lazyImage = "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201%201'%20height%3D'500'%20width%3D'960'%20style%3D'background-color%3Argb(203%2C213%2C224)'%2F%3E" -%}
+<h2 class="featuredHeader">FEATURED</h2>
+{% for post in featured %}
+    <div class="featuredItem">
+        <div class="thumb">
+            {% if post.data.category %}
+                <a href="/category/{{ post.data.category | slugMaker }}" class="postCat">{{ post.data.category | capitalize }}</a>
+            {% endif %}
+            <div class="imageContainer">
+                <a href="{{ post.url | url }}"><img src="{{ lazyImage }}" data-src="{% if post.data.thumb %}{{ post.data.thumb | url }}{% else %}{{ '/assets/images/no-image.svg' | url }}{% endif %}" class="lazy" alt=""/>
+                </a>
+            </div>
+        </div>
+        <div class="info">
+            <h3>
+                <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+            </h3>
+            <span title="Published Date">{{ post.data.page.date | readableDate }}</span>
+        </div>
+    </div>
+{% endfor %}
