@@ -1,7 +1,12 @@
 {
     "title": "Deleventy",
     "description": "Home",
-    "author": "admin",
+    "author": {
+        "name": "degre",
+        "fullname": "Dincer Degre",
+        "email": "info@dincerdegre.com",
+        "phone": "+90 123 45 67"
+    },
     "keywords": [
         "tag1",
         "tag2"

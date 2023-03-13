@@ -1,4 +1,4 @@
-const siteData = require("../../src/_data/site.json");
+const siteData = require("../../_data/site.json");
 
 module.exports = (coll) => {
   const allPosts = require("./posts")(coll);

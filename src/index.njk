@@ -6,10 +6,19 @@ pagination:
     alias: paged
 permalink: "{% if paged.number > 1 %}page/{{ paged.number }}/{% endif %}index.html"
 ---
-
-<div>
-    {% include "partials/post-item.njk" %}
+{%- set flexColumn -%}
+{% if paged.number <= 1 %} {{"flexColumnReverse" | safe}}{%- else -%}{{"flexColumn" | safe}}{%- endif -%}
+{%- endset -%}
+ <div class="row flexTop {{flexColumn}}">
+    <div class="article">
+        {% include "partials/post-item.njk" %}
+        {% if collections.posts.length > site.paginate %}
+            {% include "partials/pagination.njk" %}
+        {% endif %}
+    </div>
+    <div class="sidebar">
+        <div class="sidebarContainer">
+            {% include "partials/featured-item.njk" %}
+        </div>
+    </div>
 </div>
-{% if collections.posts.length > site.paginate %}
-    {% include "partials/pagination.njk" %}
-{% endif %}

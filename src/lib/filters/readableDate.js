@@ -1,5 +1,5 @@
 const { DateTime } = require("luxon");
-const siteData = require("../../src/_data/site.json");
+const siteData = require("../../_data/site.json");
 
 module.exports = (date) => {
   let locale = "en";

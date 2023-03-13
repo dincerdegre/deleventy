@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{%- set lazyImage = "data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%201%201'%20height%3D'500'%20width%3D'960'%20style%3D'background-color%3Argb(203%2C213%2C224)'%2F%3E" -%}
+<div class="row flexTop flexColumn">
+    <div class="article">
+        <div class="postBody">
+    <div class="breadcrumb">
+        <a href="/">Home</a> > {% if category %}
+                    <a href="/category/{{ category | slugMaker }}" class="postCat">{{ category | capitalize }}</a> >
+                {% endif %} {{ title }}
+    </div>
+    <h2>{{title}}</h2>
+    <div class="thumbContainer">
+            <div class="image">
+                <div>
+                 <img src="{{ lazyImage }}" data-src="{% if thumb %}{{ thumb | url }}{% else %}{{ '/assets/images/no-image.svg' | url }}{% endif %}" class="lazy" alt=""/>
+                </div>
+            </div>
+    </div>
+    <div class="date">Published {{ page.date | readableDateFull}}</div>
+    <div class="tags">
+        {% if tags %}
+                   {% for tag in tags %}
+                   <a href="/tag/{{ tag | slugMaker }}" class="postTag">{{ tag | capitalize }}</a>
+                   {% endfor %}
+                {% endif %}
+    </div>
+    <div class="post">
+        {{ content | safe }}
+    </div>
+</div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebarContainer">
+            {% include "partials/featured-item.njk" %}
+        </div>
+    </div>
+</div>
+
+
+

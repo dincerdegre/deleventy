@@ -12,17 +12,9 @@
     </head>
     <body>
         {% include "partials/header.njk" %}
-        <main class="mainContainer">
-            <div class="row flexTop">
-                <div class="article">{{ content | safe }}</div>
-                <div class="sidebar">
-                    <div class="sidebarContainer">
-                    {% include "partials/featured-item.njk" %}
-                    </div>
-                </div>
-            </div>
+        <main>
+           {{ content | safe }}
         </main>
-        
         {% include "partials/footer.njk" %}
         <script src="{{ '/assets/js/bundle.js' | url }}"></script>
     </body>

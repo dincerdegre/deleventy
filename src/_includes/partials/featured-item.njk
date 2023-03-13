@@ -3,7 +3,7 @@
 <h2 class="featuredHeader">FEATURED</h2>
 {% for post in featured %}
     <div class="featuredItem">
-        <div class="thumb">
+        <div class="featThumb">
             {% if post.data.category %}
                 <a href="/category/{{ post.data.category | slugMaker }}" class="postCat">{{ post.data.category | capitalize }}</a>
             {% endif %}
@@ -12,7 +12,7 @@
                 </a>
             </div>
         </div>
-        <div class="info">
+        <div class="featInfo">
             <h3>
                 <a href="{{ post.url | url }}">{{ post.data.title }}</a>
             </h3>
