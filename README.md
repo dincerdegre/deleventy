@@ -1,5 +1,5 @@
 # Deleventy
-This project is a Responsive Blog Template for [Eleventy](https://www.11ty.io/) static site generator. You can see demo at [deleventy](https://)
+This project is a Responsive Blog Template for [Eleventy](https://www.11ty.io/) static site generator. You can see demo at [Deleventy](https://deleventy.netlify.app/)
 This project has Pagination, Single Page, Tag Page, Category page and more.
 
 ## Quickstart
