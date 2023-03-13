@@ -36,10 +36,6 @@ Sass Support for Project
 
 Run scripts that set and use environment variables across platforms
 
-### Html-minifier
-
-Minify html files
-
 ### Luxon
 
 Get DateTime and Locale changes
@@ -48,9 +44,6 @@ Get DateTime and Locale changes
 
 A deep deletion module for project re-build
 
-### Terser
-
-Minify Js files
 
 ### Pexels
 
