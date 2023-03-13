@@ -1,0 +1,27 @@
+---
+layout: default
+eleventyExcludeFromCollections: true
+pagination:
+    data: collections.pagedPostsByCategory
+    size: 1
+    alias: paged
+permalink: "category/{{ paged.catName | slugMaker }}/{% if paged.number > 1 %}{{ paged.number }}/{% endif %}index.html"
+eleventyComputed:
+    title: "Category \"{{ paged.catName | capitalize }}\""
+---
+
+
+ <div class="row flexTop flexColumn">
+    <div class="article">
+        <h2 class="bigHeading">Category With {{ paged.catName | capitalize }}</h2>
+        {% include "partials/post-item.njk" %}
+        {% if collections.catList[paged.catName] > site.paginate %}
+            {% include "partials/pagination.njk" %}
+        {% endif %}
+    </div>
+    <div class="sidebar">
+        <div class="sidebarContainer">
+            {% include "partials/featured-item.njk" %}
+        </div>
+    </div>
+</div>

@@ -168,6 +168,10 @@ main {
   padding: 0 10px;
 }
 
+.bigHeading {
+  margin:0 0 1.5rem 0;
+}
+
 .postItem {
   width: 100%;
   margin-bottom: 2rem;
@@ -581,6 +585,9 @@ a {
   }
   .article {
     padding: 0;
+  }
+  .bigHeading {
+    text-align: center;
   }
   .postItem {
     justify-content: center;

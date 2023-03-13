@@ -17,7 +17,10 @@ module.exports = (config) => {
     config.addFilter('capitalize', require('./src/lib/filters/capitalize'));
     config.addCollection('posts',require('./src/lib/collections/posts'));
     config.addCollection('pagedPosts',require('./src/lib/collections/pagedPosts'));
+    config.addCollection('pagedPostsByCategory',require('./src/lib/collections/pagedPostsByCategory'));
+    config.addCollection('pagedPostsByTag',require('./src/lib/collections/pagedPostsByTag'));
     config.addCollection('featuredPosts',require('./src/lib/collections/featuredPosts'));
+    config.addCollection('list',require('./src/lib/collections/categoryList'));
 
     return {
         dir: {
