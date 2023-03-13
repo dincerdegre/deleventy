@@ -15,10 +15,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "cross-env": "^7.0.3",
-    "html-minifier": "^4.0.0",
     "luxon": "^3.3.0",
-    "rimraf": "^4.4.0",
-    "terser": "^5.16.6"
+    "rimraf": "^4.4.0"
   },
   "dependencies": {
     "eleventy-sass": "^2.1.7"

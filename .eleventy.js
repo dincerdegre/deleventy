@@ -10,7 +10,6 @@ module.exports = (config) => {
     config.addPassthroughCopy({'src/assets/images/': '/assets/images'});
     config.addPassthroughCopy({'src/posts/images/': '/assets/images'});
 
-    config.addFilter('minifyJs', require('./src/lib/filters/minifyJs'));
     config.addFilter('readableDate', require('./src/lib/filters/readableDate'));
     config.addFilter('readableDateFull', require('./src/lib/filters/readableDateFull'));
     config.addFilter('slugMaker', require('./src/lib/filters/slugMaker'));
@@ -20,7 +19,6 @@ module.exports = (config) => {
     config.addCollection('pagedPostsByCategory',require('./src/lib/collections/pagedPostsByCategory'));
     config.addCollection('pagedPostsByTag',require('./src/lib/collections/pagedPostsByTag'));
     config.addCollection('featuredPosts',require('./src/lib/collections/featuredPosts'));
-    config.addCollection('list',require('./src/lib/collections/categoryList'));
 
     return {
         dir: {
